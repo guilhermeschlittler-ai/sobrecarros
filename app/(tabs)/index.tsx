@@ -3,10 +3,9 @@ import {Link} from 'expo-router';
 export default function Index() {
   return (
   <View style={styles.container}>
-       <Text style={styles.text}>Tela de Inicio</Text>
-        <Link href="/about" style={styles.button}>
-         Vá para a tela Sobre
-        </Link>
+       <Text style={styles.text}>Carros são veículos motorizados utilizados principalmente para o transporte de pessoas, geralmente com quatro rodas e conduzidos por um motorista. Eles podem ser movidos por motores a combustão, que utilizam gasolina, etanol ou diesel, ou por motores elétricos, que funcionam com baterias recarregáveis, além dos modelos híbridos que combinam ambas as tecnologias. Entre suas principais características estão a potência do motor, o consumo de combustível, o tipo de transmissão (manual ou automática) e os sistemas de segurança, como freios ABS, airbags e controle de estabilidade. Os carros apresentam diferentes tipos de design, como hatch, sedã, SUV e picape, cada um atendendo a necessidades específicas. Além disso, os modelos modernos contam com tecnologias avançadas, incluindo sensores, conectividade com smartphones e assistentes de direção, tornando-os mais seguros, confortáveis e eficientes para o uso no dia a dia.
+</Text>
+        
       </View>
   );
 
