@@ -3,10 +3,9 @@ import {Link} from 'expo-router';
 export default function AboutScreen() {
   return (
   <View style={styles.container}>
-       <Text style={styles.text}>Sobre</Text>
-       <Link href="/" style={styles.button}>
-                Vá para a tela de Inicio
-               </Link>
+       <Text style={styles.text}>
+        Meu nome é Guilherme Domingues Schlittler, tenho 17 anos e sou um entusiasta de carros. Desde pequeno, sempre fui fascinado por veículos e tudo relacionado a eles. Adoro aprender sobre diferentes modelos, suas características e histórias. Além disso, gosto de acompanhar as últimas novidades do mundo automotivo e sonhar com o dia em que poderei ter meu próprio carro.
+       </Text>     
       </View>
   );
 
@@ -22,7 +21,7 @@ export default function AboutScreen() {
         color: '#0fec98'
       },
       button: {
-        fontSize: 20,
+        fontSize: 15,
         textDecorationLine: 'underline',
         color: '#fff',
       },
