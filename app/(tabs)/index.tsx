@@ -15,7 +15,8 @@ export default function Index() {
         flex: 1,
         backgroundColor: '#cecb0f', 
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center', 
+        padding: 10,
       },
       text: {
         color: '#3a15c0'

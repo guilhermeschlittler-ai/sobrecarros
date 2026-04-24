@@ -15,7 +15,8 @@ export default function AboutScreen() {
         flex: 1,
         backgroundColor: '#f00e0e', 
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center', 
+        padding: 10,
       },
       text: {
         color: '#0fec98'
