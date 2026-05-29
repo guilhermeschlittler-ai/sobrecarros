@@ -1,29 +1,56 @@
-import { Text, View, StyleSheet} from "react-native";
-import {Link} from 'expo-router';
-export default function Index() {
-  return (
-  <View style={styles.container}>
-       <Text style={styles.text}>Carros são veículos motorizados utilizados principalmente para o transporte de pessoas, geralmente com quatro rodas e conduzidos por um motorista. Eles podem ser movidos por motores a combustão, que utilizam gasolina, etanol ou diesel, ou por motores elétricos, que funcionam com baterias recarregáveis, além dos modelos híbridos que combinam ambas as tecnologias. Entre suas principais características estão a potência do motor, o consumo de combustível, o tipo de transmissão (manual ou automática) e os sistemas de segurança, como freios ABS, airbags e controle de estabilidade. Os carros apresentam diferentes tipos de design, como hatch, sedã, SUV e picape, cada um atendendo a necessidades específicas. Além disso, os modelos modernos contam com tecnologias avançadas, incluindo sensores, conectividade com smartphones e assistentes de direção, tornando-os mais seguros, confortáveis e eficientes para o uso no dia a dia.
-</Text>
-        
-      </View>
-  );
+import { View, StyleSheet} from "react-native";
+import * as ImagePicker from 'expo-image-picker';
+import { useState } from "react";
+import Button from '@/components/Button';
+import ImageViewer from '@/components/ImageViewer';
 
+const PlaceholderImage = require('@/assets/images/background-image.png');
+
+export default function Index() {
+  const [selectedImage, setSelectedImage] = useState<string | undefined>(undefined);
+
+  const pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ['images'],
+      allowsEditing: true,
+      quality: 1,
+    });
+
+    if (!result.canceled) {
+      setSelectedImage(result.assets[0].uri);
+      console.log(result);
+    } else {
+      alert ('You did not select any image.');
+    }
+  };
+  return (
+    <View style={styles.container}>
+      <View style={styles.imageContainer}>
+        <ImageViewer imgSource={PlaceholderImage} selectedImage={selectedImage} />
+      </View>
+
+      <View style={styles.footerContainer}>
+        <Button theme="primary" label="Choose a photo" onPress={pickImage} />
+        <Button label="Use this photo" />
+      </View>
+    </View>
+  );
 }
-  const styles = StyleSheet.create({
-    container: {  
-        flex: 1,
-        backgroundColor: '#cecb0f', 
-        alignItems: 'center',
-        justifyContent: 'center', 
-        padding: 10,
-      },
-      text: {
-        color: '#3a15c0'
-      },
-      button: {
-        fontSize: 20,
-        textDecorationLine: 'underline',
-        color: '#fff',
-      },
-  });
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#25292e',
+    alignItems: 'center',
+  },
+
+  imageContainer: {
+    flex: 1,
+    paddingTop: 28,
+  },
+
+  footerContainer: {
+    flex: 1 / 3,
+    alignItems: 'center',
+  },
+});
