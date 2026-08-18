@@ -1,8 +1,8 @@
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
-import { useBuscaCep } from './hooks/UseBuscaCep';
+import { useBuscaCep } from '@/hooks/UseBuscaCep';
 
-export default function BuscaCEP() {
-  const { cep, setCep, endereco, buscarCEP } = useBuscaCep();
+export default function BuscaCep() {
+  const { cep, setCep, endereco, buscarCep } = useBuscaCep();
 
   return (
     <View style={styles.container}>
@@ -20,7 +20,7 @@ export default function BuscaCEP() {
 
       <Button
         title="Buscar"
-        onPress={buscarCEP}
+        onPress={buscarCep}
       />
 
       {endereco.logradouro !== '' && (
