@@ -6,13 +6,14 @@ export default function BuscaCep() {
 
   return (
     <View style={styles.container}>
-      <Text>Encontre seu Carro</Text>
+      <Text style={styles.title}>Encontre seu Carro</Text>
 
       <TextInput
         style={styles.textInput}
         value={cep}
         onChangeText={setCep}
         placeholder="Digite o CEP"
+        placeholderTextColor="white"
         keyboardType="numeric"
       />
 
@@ -47,6 +48,7 @@ const styles = StyleSheet.create({
     width: '80%',
     borderWidth: 1,
     borderColor: 'white',
+    color: 'white',
     padding: 8,
     marginVertical: 10,
   },
@@ -56,5 +58,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'white',
     borderRadius: 8,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 8,
+    color: 'white',
   },
 });
