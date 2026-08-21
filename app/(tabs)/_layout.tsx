@@ -44,6 +44,16 @@ export default function TabLayout() {
               ),
            }}
         />
+
+        <Tabs.Screen
+           name="BuscaCEP"
+           options={{
+              title: "Localizar Carro",
+              tabBarIcon: ({ color, focused }) => (
+                <Ionicons name={focused ? "location" : "location-outline"} size={24} color={color} />
+              ),
+           }}
+        />
         </Tabs>
     );  
 }

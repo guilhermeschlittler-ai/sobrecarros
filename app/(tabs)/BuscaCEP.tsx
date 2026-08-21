@@ -6,7 +6,7 @@ export default function BuscaCep() {
 
   return (
     <View style={styles.container}>
-      <Text>Consulte seu CEP</Text>
+      <Text>Encontre seu Carro</Text>
 
       <TextInput
         style={styles.textInput}
@@ -38,7 +38,7 @@ export default function BuscaCep() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#5c52b3',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 16,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   textInput: {
     width: '80%',
     borderWidth: 1,
-    borderColor: 'gray',
+    borderColor: 'white',
     padding: 8,
     marginVertical: 10,
   },
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     padding: 16,
     borderWidth: 1,
-    borderColor: 'gray',
+    borderColor: 'white',
     borderRadius: 8,
   },
 });
